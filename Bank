@@ -1,0 +1,19 @@
+def main():
+    while True:
+        try:
+            checks = int(input("Enter the number of checks for the month: "))
+            charge = 0
+            if checks>=60:
+                charge = checks * 0.04
+            elif checks>=40:
+                charge = checks * 0.06
+            elif checks>=20:
+                charge = checks * 0.08
+            else:
+                charge = checks * 0.10
+            print(f"Banks service fees for the month : $ {charge:0.2f}")
+            break
+        except ValueError:
+
+            print("Something went wrong with the input. Try again.")
+main()
